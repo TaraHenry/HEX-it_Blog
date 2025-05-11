@@ -1,0 +1,281 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <section id="home" class="home-section">
+        <d class="h-container">
+            <div class="card">
+                <h1>Highly Efficient X-it</h1>
+                <h2>A Real-Time Evacuation System</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="overview" class="overview">
+        <div class="o-container">
+            <h1>Overview</h1>
+            <div class="row">
+                <div class="o-card">
+                    <h2>What is HEX-it?</h2>
+                    <p>
+                        HEX-it, is an integrated hardware-software system that combines pre-loaded building blueprints with real-time sensor data, designed to capture real-time data to accurately map accessible and inaccessible areas within a building during emergencies, identify trapped individuals, and determine the safest evacuation routes.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- <div class="image-row">
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/lidar.jpg') }}" alt="Lidar image" class="lidar-image">
+                </div>
+            </div> -->
+            
+            <div class="row">
+                <div class="o-card">
+                    <h2>How Does it Work?</h2>
+                    <p>
+                        The system will take in as input, real-time sensor data, a pre-loaded building blueprint, and real-time location data from emergency response personnel within the building. Based on the sensor data, the hardware system will send actionable data to a control centre. This data includes environmental information, spatial mapping, and motion and obstacle detection. The system will output to a control center, a website displaying a generated map of the building, the location and path to identified victims, and compromised areas noted on the map.                    
+                    </p>
+                </div>
+                <div class="o-card">
+                    <h2>Why is it Important?</h2>
+                    <p>
+                        Current emergency response systems in high-rise buildings lack real-time data and, in the event of a natural disaster, are unaware of possible obstacles that would change the layout of the building as well as identify the location of trapped individuals. This results in delayed evacuations, inefficient rescue operations, and increased risk to lives and property. There is a critical need for a system that can provide real-time situational awareness, including the location of trapped individuals, environmental conditions, and optimal evacuation routes, to enhance the safety of occupants and the effectiveness of emergency responders.
+                    </p>
+                </div>
+                <div class="o-card">
+                    <h2>Target Audience</h2>
+                    <p>
+                        The system is designed for emergency responders and their teams, including fire departments, police, and other emergency services. It is also relevant to building management and safety personnel who are responsible for ensuring the safety of occupants during emergencies. The system can be used in various settings, including high-rise buildings, commercial complexes, and public venues, where real-time situational awareness and efficient evacuation planning are critical.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="f-container">
+            <h1>Features</h1>
+            <br>
+            <div class="row">
+                <div class="f-card">
+                    <h2 class="card-title">Hardware</h2>
+                    <div class="card-text">
+                        <ul>
+                            <li>Drone/Mobile-device mounted</li>
+                            <li>Real-time sensor data capture such as:
+                                <ul>
+                                    <li>Temperature and Altitude -- using BMP sensors</li>
+                                    <li>Motion and Orientation -- using MPU modules</li>
+                                    <li>Spatial Mapping -- using LiDAR</li>
+                                    <li>Image Capture for Human detection -- using ESP32 Camera</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f-card">
+                    <h2 class="card-title">Software</h2>
+                    <div class="card-text">
+                        <ul>
+                            <li>Sensor Data Processing</li>
+                            <li>Evacuation Path Generation</li>
+                            <li>Real-time information storage</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f-card">
+                    <h2 class="card-title">Communication</h2>
+                    <div class="card-text">
+                        <ul>
+                            <li>Wireless data transmission and local data processing using LoRa ESP module</li>
+                            <li>MQTT Protocol for backend, frontend and hardware communication</li>
+                            <li>I2C for sensor and microcontroller communication</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f-card">
+                    <h2 class="card-title">User Interface</h2>
+                    <div class="card-text">
+                        <ul>
+                            <li>Web-based interface for real-time monitoring</li>
+                            <li>Interactive map display of building layout</li>
+                            <li>Alerts and notifications for emergency responders</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="interface" class="interface">
+        <div class="i-container">
+            <h1>Web Interface</h1>
+            <div class="gallery">
+                <div class="gallery-nav">
+                    <button class="prev-btn">❮</button>
+                    <button class="next-btn">❯</button>
+                </div>
+
+                <div class="slide active">
+                    <img class="slide-image" src="static/images/home.jpg">
+                    <button class="info">i</button>
+                    <div class="info-sheet">
+                        <button class="close">×</button>
+                        <h2 class="info-title">Live Page</h2>
+                        <div class="info-content">
+                            <p>Tester</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="slide-image" src="static/images/lidar.jpg">
+                    <button class="info">i</button>
+                    <div class="info-sheet">
+                        <button class="close">×</button>
+                        <h2 class="info-title">Login Page</h2>
+                        <div class="info-content">
+                            <p>Tester</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thumbnails">
+                <div class="thumbnail active" data-index="0">
+                    <img src="static/images/home.jpg" alt="Home Page">
+                </div>
+                <div class="thumbnail" data-index="1">
+                    <img src="static/images/lidar.jpg" alt="Sign-in Page">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Get elements
+                const slides = document.querySelectorAll('.slide');
+                const thumbnails = document.querySelectorAll('.thumbnail');
+                const prevBtn = document.querySelector('.prev-btn');
+                const nextBtn = document.querySelector('.next-btn');
+                const infoButtons = document.querySelectorAll('.info');
+                const closeInfoButtons = document.querySelectorAll('.close');
+
+                let currentSlide = 0;
+                
+                // Function to show a specific slide
+                function showSlide(index) {
+                    // Hide all slides
+                    slides.forEach(slide => {
+                        slide.classList.remove('active');
+                        slide.classList.remove('info-visible');
+                    });
+                    
+                    // Deactivate all thumbnails
+                    thumbnails.forEach(thumb => {
+                        thumb.classList.remove('active');
+                    });
+                    
+                    // Show the selected slide and activate its thumbnail
+                    slides[index].classList.add('active');
+                    thumbnails[index].classList.add('active');
+                    
+                    currentSlide = index;
+                }
+                
+                // Event listeners for prev/next buttons
+                prevBtn.addEventListener('click', function() {
+                    let newIndex = currentSlide - 1;
+                    if (newIndex < 0) newIndex = slides.length - 1;
+                    showSlide(newIndex);
+                });
+                
+                nextBtn.addEventListener('click', function() {
+                    let newIndex = currentSlide + 1;
+                    if (newIndex >= slides.length) newIndex = 0;
+                    showSlide(newIndex);
+                });
+                
+                // Event listeners for thumbnails
+                thumbnails.forEach(thumb => {
+                    thumb.addEventListener('click', function() {
+                        const slideIndex = parseInt(this.getAttribute('data-index'));
+                        showSlide(slideIndex);
+                    });
+                });
+                
+                // Event listeners for info buttons
+                infoButtons.forEach((btn, index) => {
+                    btn.addEventListener('click', function() {
+                        slides[index].classList.add('info-visible');
+                    });
+                });
+                
+                // Event listeners for close info buttons
+                closeInfoButtons.forEach((btn, index) => {
+                    btn.addEventListener('click', function() {
+                        slides[index].classList.remove('info-visible');
+                    });
+                });
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'ArrowLeft') {
+                        let newIndex = currentSlide - 1;
+                        if (newIndex < 0) newIndex = slides.length - 1;
+                        showSlide(newIndex);
+                    } else if (e.key === 'ArrowRight') {
+                        let newIndex = currentSlide + 1;
+                        if (newIndex >= slides.length) newIndex = 0;
+                        showSlide(newIndex);
+                    }
+                });
+                
+                // Initialize first slide
+                showSlide(0);
+                
+            });
+        </script>
+    </section>
+
+    <section id="advantages" class="advantages">
+        <div class="a-container">
+            <h1>Why HEX-it?</h1>
+            <br>
+            <div class="row">
+                <div class="a-card">
+                    <h2 class="card-title">Real-time situational awareness</h2>
+                    <div class="a-card-text">
+                        <p>Provides real-time information on the state of the environment, allowing for more informed decision-making by emergency responders. This in turn, enhances the overall safety and efficiency of rescue operations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="a-card">
+                    <h2 class="card-title">Enhanced Evacuation Efficiency</h2>
+                    <div class="a-card-text">
+                        <p>Identifies the shortest and relatively safest evacuation routes based on the condition of the environment, reducing evacuation time and confusion.</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="a-card">
+                    <h2 class="card-title">Adaptability</h2>
+                    <div class="a-card-text">
+                        <p>Adapts to changing environmental conditions like obstacle detection, ensuring optimal performance in dynamic situations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="a-card">
+                    <h2 class="card-title">System Integration</h2>
+                    <div class="a-card-text">
+                        <p>Integrates various subsystems and components into a cohesive system, ensuring seamless communication and data exchange.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top"> ↑ </a>
+{% endblock %}
