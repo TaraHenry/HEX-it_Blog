@@ -512,7 +512,7 @@ h1 {
     .card {
         max-width: 80%;
     }
-    .f-card, .a-card {
+    .f-card, .a-card ,.o-card{
         max-width: 100%;
     }
 }
