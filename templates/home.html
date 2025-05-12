@@ -17,34 +17,27 @@
                 <div class="o-card">
                     <h2>What is HEX-it?</h2>
                     <p>
-                        HEX-it, is an integrated hardware-software system that combines pre-loaded building blueprints with real-time sensor data, designed to capture real-time data to accurately map accessible and inaccessible areas within a building during emergencies, identify trapped individuals, and determine the safest evacuation routes.
+                        HEX-it, is a <bold>mobile-device-mounted</bold> hardware-software system that captures real-time sensor data, to accurately map accessible and inaccessible areas within a building during emergencies, identify trapped individuals, and determine the safest evacuation routes.
                     </p>
                 </div>
             </div>
             
-            <!-- <div class="image-row">
-                <div class="image">
-                    <img src="{{ url_for('static', filename='images/lidar.jpg') }}" alt="Lidar image" class="lidar-image">
-                </div>
-            </div> -->
-            
             <div class="row">
                 <div class="o-card">
                     <h2>How Does it Work?</h2>
-                    <p>
-                        The system will take in as input, real-time sensor data, a pre-loaded building blueprint, and real-time location data from emergency response personnel within the building. Based on the sensor data, the hardware system will send actionable data to a control centre. This data includes environmental information, spatial mapping, and motion and obstacle detection. The system will output to a control center, a website displaying a generated map of the building, the location and path to identified victims, and compromised areas noted on the map.                    
-                    </p>
+                    <li>The system will take in as input, real-time sensor data, a pre-loaded building blueprint, and real-time location data from emergency response personnel within the building. </li>
+                    <li>Based on the sensor data, the hardware system will send actionable data to a control centre. This data includes environmental information, spatial mapping, and motion and obstacle detection. </li>
+                    <li>The system will output to a control center, a website displaying a generated map of the building, the location and path to identified victims, and compromised areas noted on the map.</li>
                 </div>
                 <div class="o-card">
-                    <h2>Why is it Important?</h2>
-                    <p>
-                        Current emergency response systems in high-rise buildings lack real-time data and, in the event of a natural disaster, are unaware of possible obstacles that would change the layout of the building as well as identify the location of trapped individuals. This results in delayed evacuations, inefficient rescue operations, and increased risk to lives and property. There is a critical need for a system that can provide real-time situational awareness, including the location of trapped individuals, environmental conditions, and optimal evacuation routes, to enhance the safety of occupants and the effectiveness of emergency responders.
-                    </p>
+                    <h2>Why HEX-it?</h2>
+                    <p>Current emergency response systems in the event of a natural disaster, are unaware of possible obstacles that could change the layout of the building, and the possible location of trapped individuals. This leads to delayed evacuations and inefficient rescue operations.</p>
+                    <p>There is a critical need for a system that can provide real-time situational awareness, including the location of trapped individuals, environmental conditions, and optimal evacuation routes, to reduce confusion and enhance the safety of persons and the effectiveness of emergency responders.</p>
                 </div>
                 <div class="o-card">
                     <h2>Target Audience</h2>
                     <p>
-                        The system is designed for emergency responders and their teams, including fire departments, police, and other emergency services. It is also relevant to building management and safety personnel who are responsible for ensuring the safety of occupants during emergencies. The system can be used in various settings, including high-rise buildings, commercial complexes, and public venues, where real-time situational awareness and efficient evacuation planning are critical.
+                        The system is designed for emergency responders and their teams, including fire departments, police, and other emergency services. It is also relevant to building management and safety personnel who are responsible for ensuring the safety of occupants during emergencies. The system can be used in various settings, where real-time situational awareness and efficient evacuation planning are critical.
                     </p>
                 </div>
             </div>
@@ -69,6 +62,7 @@
                                     <li>Image Capture for Human detection -- using ESP32 Camera</li>
                                 </ul>
                             </li>
+                            <li>Real-time human detection and flagging.</li>
                         </ul>
                     </div>
                 </div>
@@ -76,9 +70,10 @@
                     <h2 class="card-title">Software</h2>
                     <div class="card-text">
                         <ul>
-                            <li>Sensor Data Processing</li>
+                            <li>Sensor Data Transmission and Processing</li>
                             <li>Evacuation Path Generation</li>
-                            <li>Real-time information storage</li>
+                            <li>Building Mapping - display and render of 2D spatial maps using incoming sensor data.</li>
+                            <li>Real-time visualization data storage (mapped environments and detection logs)</li>
                         </ul>
                     </div>
                 </div>
@@ -87,8 +82,7 @@
                     <div class="card-text">
                         <ul>
                             <li>Wireless data transmission and local data processing using LoRa ESP module</li>
-                            <li>MQTT Protocol for backend, frontend and hardware communication</li>
-                            <li>I2C for sensor and microcontroller communication</li>
+                            <li>Relay of Evacuation Instructions between Control Centre and Emergency Personnel</li>
                         </ul>
                     </div>
                 </div>
@@ -120,9 +114,9 @@
                     <button class="info">i</button>
                     <div class="info-sheet">
                         <button class="close">×</button>
-                        <h2 class="info-title">Live Page</h2>
+                        <h2 class="info-title">Login Page</h2>
                         <div class="info-content">
-                            <p>Tester</p>
+                            <p>Provides secure access to the interactive web-page for control centre personnel. It features two input fields, a username and password that are provided to the user upon acquisition of the system.</p>
                         </div>
                     </div>
                 </div>
@@ -131,9 +125,9 @@
                     <button class="info">i</button>
                     <div class="info-sheet">
                         <button class="close">×</button>
-                        <h2 class="info-title">Login Page</h2>
+                        <h2 class="info-title">Live Page</h2>
                         <div class="info-content">
-                            <p>Tester</p>
+                            <p>Displays real-time data from the sensors and drones, providing comprehensive situational awareness for the control centre personnel.</p>
                         </div>
                     </div>
                 </div>
