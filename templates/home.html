@@ -2,7 +2,7 @@
 
 {% block main %}
     <section id="home" class="home-section">
-        <d class="h-container">
+        <div class="h-container">
             <div class="card">
                 <h1>Highly Efficient X-it</h1>
                 <h2>A Real-Time Evacuation System</h2>
@@ -17,7 +17,7 @@
                 <div class="o-card">
                     <h2>What is HEX-it?</h2>
                     <p>
-                        HEX-it, is a <bold>mobile-device-mounted</bold> hardware-software system that captures real-time sensor data, to accurately map accessible and inaccessible areas within a building during emergencies, identify trapped individuals, and determine the safest evacuation routes.
+                        HEX-it, is a <bold>drone-mounted</bold> sensor system that captures real-time sensor data, to accurately map accessible and inaccessible areas within a building during emergencies, identify trapped individuals, and determine the safest evacuation routes.
                     </p>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                     <h2 class="card-title">Hardware</h2>
                     <div class="card-text">
                         <ul>
-                            <li>Drone/Mobile-device mounted</li>
+                            <li>Drone mounted</li>
                             <li>Real-time sensor data capture such as:
                                 <ul>
                                     <li>Temperature and Altitude -- using BMP sensors</li>
@@ -100,6 +100,23 @@
         </div>
     </section>
     
+    <section id="hardware" class="hardware">
+        <div class="i-container">
+            <h1>Hardware</h1>
+            <div class="picture-box">
+                <img class="slide-image" src="static/images/sensors.jpg">
+            </div>
+            <p>HEX-it Hardware System comprised of sensors and modules.</p>
+            <p>Components included in image (left-to-right):</p>
+            <ul>
+                <li>LiDAR</li>
+                <li>BMP280</li>
+                <li>MPU6050</li>
+                <li>ESP32 LoRa Module</li>
+            </ul>
+        </div>
+    </section>
+
     <section id="interface" class="interface">
         <div class="i-container">
             <h1>Web Interface</h1>
@@ -110,7 +127,7 @@
                 </div>
 
                 <div class="slide active">
-                    <img class="slide-image" src="static/images/home.jpg">
+                    <img class="slide-image" src="static/images/Login.jpg">
                     <button class="info">i</button>
                     <div class="info-sheet">
                         <button class="close">×</button>
@@ -121,13 +138,35 @@
                     </div>
                 </div>
                 <div class="slide">
-                    <img class="slide-image" src="static/images/lidar.jpg">
+                    <img class="slide-image" src="static/images/Live.jpg">
                     <button class="info">i</button>
                     <div class="info-sheet">
                         <button class="close">×</button>
-                        <h2 class="info-title">Live Page</h2>
+                        <h2 class="info-title">Home Page</h2>
                         <div class="info-content">
-                            <p>Displays real-time data from the sensors and drones, providing comprehensive situational awareness for the control centre personnel.</p>
+                            <p>Displays blueprint visualization developed by the system, providing comprehensive situational awareness for the control centre personnel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="slide-image" src="static/images/about.jpg">
+                    <button class="info">i</button>
+                    <div class="info-sheet">
+                        <button class="close">×</button>
+                        <h2 class="info-title">About Page</h2>
+                        <div class="info-content">
+                            <p>Displays the background, motivation and computational problem of the developed system.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img class="slide-image" src="static/images/matlab.jpg">
+                    <button class="info">i</button>
+                    <div class="info-sheet">
+                        <button class="close">×</button>
+                        <h2 class="info-title">MATLAB Control Page</h2>
+                        <div class="info-content">
+                            <p>Provides functionality to perform pathfinding algorithm.</p>
                         </div>
                     </div>
                 </div>
@@ -135,10 +174,16 @@
 
             <div class="thumbnails">
                 <div class="thumbnail active" data-index="0">
-                    <img src="static/images/home.jpg" alt="Home Page">
+                    <img src="static/images/Login.jpg" alt="Login Page">
                 </div>
                 <div class="thumbnail" data-index="1">
-                    <img src="static/images/lidar.jpg" alt="Sign-in Page">
+                    <img src="static/images/Live.jpg" alt="Home Page">
+                </div>
+                <div class="thumbnail" data-index="2">
+                    <img src="static/images/about.jpg" alt="About Page">
+                </div>
+                <div class="thumbnail" data-index="3">
+                    <img src="static/images/matlab.jpg" alt="MATLAB Control Page">
                 </div>
             </div>
         </div>
